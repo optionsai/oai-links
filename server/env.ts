@@ -17,6 +17,8 @@ const env = cleanEnv(process.env, {
   NEO4J_DB_URI: str({ default: "" }),
   NEO4J_DB_USERNAME: str({ default: "" }),
   NEO4J_DB_PASSWORD: str({ default: "" }),
+  REDIS_TLS_URL: str(),
+  REDIS_URL: str(),
   REDIS_HOST: str({ default: "127.0.0.1" }),
   REDIS_PORT: num({ default: 6379 }),
   REDIS_PASSWORD: str({ default: "" }),
