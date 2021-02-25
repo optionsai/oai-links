@@ -3,6 +3,10 @@
   "version": "2.7.2",
   "description": "Modern URL shortener.",
   "main": "./production-server/server.js",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
   "scripts": {
     "test": "mocha --compilers js:@babel/register ./client/**/__test__/*.js",
     "docker:build": "docker build -t kutt .",
@@ -16,7 +20,9 @@
     "lint:nofix": "eslint server/ --ext .js,.ts",
     "docs:build": "cd docs/api && tsc generate.ts --resolveJsonModule && node generate && cd ../.."
   },
-  "cacheDirectories": [".next/cache"],
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint:nofix"

@@ -1,5 +1,3 @@
-require('ts-node/register');
-
 import env from "./server/env";
 
 module.exports = {
