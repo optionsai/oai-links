@@ -16,6 +16,7 @@
     "lint:nofix": "eslint server/ --ext .js,.ts",
     "docs:build": "cd docs/api && tsc generate.ts --resolveJsonModule && node generate && cd ../.."
   },
+  "cacheDirectories": [".next/cache"],
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint:nofix"
