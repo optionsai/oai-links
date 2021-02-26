@@ -14,7 +14,12 @@ const neo4j = NEO4J.driver(
 // 2. Connect to Postgres database
 const postgres = knex({
   client: "postgres",
-  connection: `${env.DATABASE_URL}?ssl=true`
+  connection: {
+    connectionString: `${env.DATABASE_URL}?ssl=true`,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  }
 });
 
 (async function() {
