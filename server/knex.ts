@@ -4,7 +4,7 @@ import env from "./env";
 
 const db = knex({
   client: "postgres",
-  connection: env.DATABASE_URL
+  connection: `${env.DATABASE_URL}?ssl=true`
 });
 
 export default db;
