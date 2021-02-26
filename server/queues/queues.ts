@@ -3,7 +3,7 @@ import path from "path";
 
 import env from "../env";
 
-const redis = env.REDIS_TLS_URL;
+const redis = env.REDIS_URL;
 
 const removeJob = job => job.remove();
 
