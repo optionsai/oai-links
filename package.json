@@ -21,7 +21,8 @@
     "docs:build": "cd docs/api && tsc generate.ts --resolveJsonModule && node generate && cd ../.."
   },
   "cacheDirectories": [
-    ".next/cache"
+    "node_modules/",
+    ".next/cache/"
   ],
   "husky": {
     "hooks": {
